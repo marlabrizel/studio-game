@@ -12,6 +12,7 @@ def score
 end
 
 def initialize (name, health=100)
+	self.name = name
 	@name = name.capitalize
 	@health = health
 end
@@ -32,15 +33,32 @@ end
 
 end
 
-
 player1 = Player.new("moe")
-puts player1
-
 player2 = Player.new("larry")
-puts player2
-player2.name = "lawrence"
-puts player2
-
 player3 = Player.new("curly")
-player3.blam
-puts player3
+
+players = [player1, player2, player3]
+
+puts "There are #{players.size} players in the game."
+players.each do |player|
+	puts player
+end
+
+players.each do |player|
+	puts player.health
+end
+
+players.each do |player|
+	player.blam
+	player.w00t
+	player.w00t
+	puts player
+end
+
+players.pop
+player4= Player.new("Shemp", 90)
+players.push(player4)
+
+players.each do |player|
+	puts player
+end
