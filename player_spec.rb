@@ -40,4 +40,23 @@ require_relative 'player'
   			expect(@player.health).to eq(@initial_health - 10)
   		end
 
+		context "with a health greater than 100" do
+			before do
+				@player = Player.new("larry", 150)
+			end
+			
+			it "is a strong player" do
+				expect(@player).to be_strong
+			end
+		end
+
+		context "with a health of 100" do
+			before do
+				@player = Player.new("larry", 100)
+			end
+
+			it "is not a strong player" do
+				expect(@player).not_to be_strong
+			end
+		end
 	end
