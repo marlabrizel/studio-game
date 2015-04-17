@@ -23,9 +23,10 @@ class Game
 		@players.each do |player|
 			die = Die.new
 			number_rolled = die.roll
-			if number_rolled < 3
+			case number_rolled
+			when 1..2
 				player.blam
-			elsif number_rolled < 5
+			when 3..4
 				puts "#{player.name} was skipped."
 			else
 				player.w00t
