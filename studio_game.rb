@@ -19,4 +19,3 @@ dogs.add_player(player5)
 dogs.add_player(player6)
 dogs.add_player(player7)
 dogs.play
-dogs.bark
