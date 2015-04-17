@@ -31,6 +31,10 @@ def w00t
 	puts "#{@name} got w00ted!"
 end
 
+def strong?
+	@health > 100
+end
+
 end
 
 if __FILE__ == $0
