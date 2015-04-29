@@ -8,7 +8,7 @@ knuckleheads = Game.new("knuckleheads")
 knuckleheads.add_player(player1)
 knuckleheads.add_player(player2)
 knuckleheads.add_player(player3)
-knuckleheads.play
+knuckleheads.play(3)
 
 player5 = Player.new("riley", 110)
 player6 = Player.new("keller", 95)
@@ -18,4 +18,4 @@ dogs = Game.new("dogs")
 dogs.add_player(player5)
 dogs.add_player(player6)
 dogs.add_player(player7)
-dogs.play
+dogs.play(1)
