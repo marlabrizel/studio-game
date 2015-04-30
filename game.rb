@@ -15,6 +15,22 @@ class Game
 		@players << new_player
 	end
 
+	def print_stats
+		strong_players, wimpy_players = @players.partition { |player| player.strong? }
+		
+		puts "\n#{title} Statistics"
+
+		puts "\n#{strong_players.size} Strong Players:"
+		strong_players.each do |player|
+			puts "#{player.name} (#{player.health})"
+		end
+
+		puts "\n#{wimpy_players.size} Wimpy Players:"
+		wimpy_players.each do |player|
+			puts "#{player.name} (#{player.health})"
+		end
+	end
+
 	def play(rounds)
 		puts "There are #{@players.size} players in #{@title}."
 		
