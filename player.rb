@@ -4,10 +4,10 @@ class Player
 	attr_accessor :name
 
 def name=(new_name)
-	@name = new_name.capitalize
-end
+  @name = new_name.capitalize
+ end
 
-def score
+ def score
 	@health + @name.length
 end
 
@@ -33,6 +33,10 @@ end
 
 def strong?
 	@health > 100
+end
+
+def <=>(other)
+	other.score <=> score
 end
 
 end
