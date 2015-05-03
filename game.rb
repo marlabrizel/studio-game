@@ -1,6 +1,7 @@
 require_relative 'player'
 require_relative 'die'
 require_relative 'game_turn'
+require_relative 'treasure_trove'
 
 class Game
 
@@ -52,9 +53,15 @@ class Game
 		1.upto(rounds) do |round|
 			puts "\nRound #{round}:"
 			@players.each do |player|
-			GameTurn.take_turn(player)
-			puts player
+				GameTurn.take_turn(player)
+				puts player
 			end
+		end
+
+		treasures = TreasureTrove::TREASURES
+		puts "\nThere are #{treasures.size} treasures to be found:"
+			treasures.each do |treasure|
+		puts "A #{treasure.name} is worth #{treasure.points} points."
 		end
 	end
 end
