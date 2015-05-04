@@ -1,4 +1,5 @@
 require_relative 'player'
+require_relative 'treasure_trove'
 
 	describe Player do
 
@@ -73,4 +74,21 @@ require_relative 'player'
   				expect(@players.sort).to eq([@player3, @player2, @player1])
   			end
 		end
+
+		it "computes points as the sum of all treasure points" do
+			expect(@player.points).to eq(0)
+
+			@player.found_treasure(Treasure.new(:hammer, 50))
+
+			expect(@player.points).to eq(50)
+
+			@player.found_treasure(Treasure.new(:crowbar, 400))
+
+			expect(@player.points).to eq(450)
+
+			@player.found_treasure(Treasure.new(:hammer, 50))
+
+			expect(@player.points).to eq(500)
+		end
+
 	end
