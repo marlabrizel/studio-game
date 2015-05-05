@@ -1,4 +1,5 @@
 require_relative 'game'
+require_relative 'game_turn'
 
 describe Game do
 
@@ -34,6 +35,17 @@ describe Game do
 		@game.play(2)
 
 		expect(@player.health).to eq(@initial_health - 10 *2)
+	end
+
+	it "assigns a treasure for points during a player's turn" do
+		game = Game.new("knuckleheads")
+		player = Player.new("moe")
+
+		game.add_player(player)
+
+		game.play(1)
+
+		expect(player.points).not_to be_zero
 	end
 
 end
