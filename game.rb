@@ -60,8 +60,8 @@ class Game
 
 		treasures = TreasureTrove::TREASURES
 		puts "\nThere are #{treasures.size} treasures to be found:"
-			treasures.each do |treasure|
-		puts "A #{treasure.name} is worth #{treasure.points} points."
+		treasures.each do |treasure|
+			puts "A #{treasure.name} is worth #{treasure.points} points."
 		end
 	end
 end
