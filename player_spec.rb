@@ -20,13 +20,17 @@ require_relative 'treasure_trove'
   		end
 
   		it "has a string representation" do
+  			 @player.found_treasure(Treasure.new(:hammer, 50))
+  			 @player.found_treasure(Treasure.new(:hammer, 50))
 
-  			expect(@player.to_s).to eq("I'm Larry with a health of 150 and a score of 155.")
+  			expect(@player.to_s).to eq("I'm Larry with health = 150, points = 100, and score = 250.")
   		end
 
-  		it "computes a score as the sum of its health and length of name" do
+  		it "computes a score as the sum of its health and points" do
+  			@player.found_treasure(Treasure.new(:hammer, 50))
+  			@player.found_treasure(Treasure.new(:hammer, 50))
 
-  			expect(@player.score).to eq(150 + 5)
+  			expect(@player.score).to eq(250)
   		end
 
   		it "increases health by 15 when w00ted" do
