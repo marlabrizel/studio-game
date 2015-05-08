@@ -1,5 +1,5 @@
 Knuckleheads High Scores:
-Woodstock........... 790
-Lucy................ 780
-Linus............... 675
-Snoopy.............. 315
+Lucy................ 860
+Snoopy.............. 485
+Linus............... 230
+Woodstock........... 95
