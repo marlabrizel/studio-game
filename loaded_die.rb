@@ -1,5 +1,6 @@
 class LoadedDie
 	include Auditable
+	
 	attr_reader :number
 
 	def roll
