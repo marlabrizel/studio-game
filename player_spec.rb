@@ -110,11 +110,11 @@ require_relative 'treasure_trove'
 				yielded << treasure
 			end
 
-			expect(yielded).to eq[
+			expect(yielded).to eq([
 				Treasure.new(:skillet, 200),
 				Treasure.new(:hammer, 50),
 				Treasure.new(:bottle, 25),
-			]
+			])
 		end
 
 		it "can be created from a CSV string" do
